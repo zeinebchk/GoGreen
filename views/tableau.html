@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>tableau de bord</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="footerStyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;800&family=Inter:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;800;900&family=Inter:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="navbarStyle.css">
+    <link rel="stylesheet" href="tableau.css">
+    <script src="https://kit.fontawesome.com/7782ba52d7.js" crossorigin="anonymous"></script>
+   
+    <style>
+   
+    </style>
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+         <label for="toggler" class="fas fa-bars"></label>
+              <a href="#" class="logo">GoGreen</a>
+                <nav class="navbar">
+                   <a href="acceuil.html">Acceuil</a>
+                   <a href="about.html">A propos</a>
+                   <a href="locations.html">Locations</a>
+                   <a href="contact.html">Contact</a>
+                </nav>
+                <div class="user-menu">
+                      <div class="user-icons">
+                          <i class="fa-solid fa-bell" id="notificationsIcon"></i>
+                          <i class="fas fa-user small-icon" id="userIcon"></i><span class="nbNotification">4</span>
+                      </div>
+                      <div class="dropdown-content" id="userDropdown">
+                        <a href="file:///C:/Users/asus/Desktop/site%20web/profil.html">
+                            <i class="fas fa-user fa-xs"></i>Profil
+                        </a>
+                        <a href="file:///C:/Users/asus/Desktop/site%20web/tableau.html">
+                            <i class="fas fa-table-list fa-xs"></i>Tableau de Bord</a>
+                          
+                        <a href="#" onclick="openDialogDeconnexion()">
+                            <i class="fa-solid fa-right-from-bracket"></i>Se Déconnecter</a>
+                           
+                          <a href="#" id="deleteLink" onclick="openDialogButtonClick()">
+                            <span>🗑️</span>Supprimer compte
+                        </a>
+                      </div>
+                      <div class="dropdown-notifications" id="dropdown-notifications">
+                        <div class="notifi-item">
+                          <div class="texto-image">
+                            <img src="images/velo1.jpeg" alt="img" width="50px" height="50px">
+                            <div class="text">
+                              <p><span>mohamed rekik</span>
+                              vous demande de louez votre vehicule <span>vélo électrique</span></p>
+                              <div class="buttonsAccept">
+                                <button class="accept">accepter</button>
+                                <button class="refuser">refuser</button>
+                               </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="notifi-item">
+                          <div class="texto-image">
+                            <img src="images/trot1.jpeg" alt="img" width="50px" height="50px">
+                            <div class="text">
+                              <p><span>Zeineb chekir</span>
+                              vous demande de louez votre vehicule <span>Trotinnette normal </span></p>
+                              <div class="buttonsAccept">
+                                <button class="accept">accepter</button>
+                                <button class="refuser">refuser</button>
+                               </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="notifi-item">
+                          <div class="texto-image">
+                         <img src="images/velo1.jpeg" alt="img" width="50px" height="50px">
+                          <div class="text">
+                            <p><span>sami zrigui</span>
+                             a accepter votre demande pour la location de <span>vélo electrique.</span>Voici son numéro de téléphone <span>28 033 556</span></p>
+                          </div>
+                        </div>
+                       </div>
+                       <div class="notifi-item">
+                        <div class="texto-image">
+                       <img src="images/velo1.jpeg" alt="img" width="50px" height="50px">
+                        <div class="text">
+                          <p><span>sami zrigui</span>
+                           a refusé votre demande pour la location de <span>vélo electrique.</p>
+                        </div>
+                      </div>
+                     </div>
+                     </div>
+                     
+                        <dialog class="delete-dialog" id="deleteDialog">
+                            <div class="delete-dialog-container">
+                                <p>Êtes-vous sûr de vouloir supprimer votre compte ?</p>
+                        
+                                <div class="dialog-buttons">
+                                    <button class="dialog-button cancel-button" onclick="cancelButtonClick()">
+                                        Annuler
+                                    </button>
+                                    <button class="dialog-button delete-button" onclick="deleteButtonClick()">
+                                        Supprimer
+                                    </button>
+                                </div>
+                            </div>
+                        </dialog>
+                        <dialog class="DeconnexionDialog" id="DeconnexionDialog">
+                          <div class="delete-dialog-container">
+                              <p>Êtes-vous sûr de vouloir déconnecter de votre compte ?</p>
+                      
+                              <div class="dialog-buttons">
+                                  <button class="dialog-button cancel-button" onclick="cancelButtonClick()">
+                                      Annuler
+                                  </button>
+                                  <button class="dialog-button delete-button" onclick="loginButtonClick()">
+                                      déconnecter
+                                  </button>
+                              </div>
+                          </div>
+                      </dialog>
+                      
+
+                </div>
+
+    </header>
+               <section>
+              
+                <div class="tableau">
+                  <div class="bande">
+                    <h1>Tableau de bord</h1>
+                  </div>
+                  <div  class="cadre">
+                        <button class="button" id="louezVeh" onclick="window.location.href = 'locationsSteps.html'">
+                         <img src="images/panier.png" width="70px" height="70px"><br>
+                          <span>Louez</span><br> véhicule
+                        </button>
+                        <button class="button" id="mon_profil" onclick="window.location.href = 'profil.html'">
+                            <img src="images/identite.jpg" width="70px" height="70px"><br>
+                            <span>Mon</span><br> Profil
+                          </button>
+                          <button class="button" id="mesAnnances" onclick="window.location.href = 'mesAnnances.php'">
+                            <img src="images/mesAnnances.jpg" width="50px" height="70px"><br>
+                            <span>Mes</span><br> annances
+                          </button>
+                          <button class="button" id="publierr" onclick="window.location.href = 'publierAnnance.html'">
+                            <img src="images/pub.jpeg" width="90px" height="80px"><br>
+                            <span>Publier </span><br> annances 
+                          </button>
+                  </div>
+                </div>
+                
+               </section>
+                <script>
+                      const userIcon = document.getElementById("userIcon");
+                    const userDropdown = document.getElementById("userDropdown");
+                    const  notificationsIcon= document.getElementById("notificationsIcon");
+                    const notifDropdown = document.getElementById("dropdown-notifications");
+                    var span=document.querySelector(".nbNotification");
+                    // Gestionnaire d'événement pour le clic sur l'icône de l'utilisateur
+                    userIcon.addEventListener("click", function() {
+                        if (userDropdown.style.display === "block") {
+                            userDropdown.style.display = "none";
+                        } else {
+                            userDropdown.style.display = "block";
+                            notifDropdown.style.display = "none";
+                           
+                        }
+                    });
+                  
+                
+                    // Gestionnaire d'événement pour le clic sur l'icône de l'utilisateur
+                    notificationsIcon.addEventListener("click", function() {
+                        if (notifDropdown.style.display === "block") {
+                          notifDropdown.style.display = "none";
+                        } else {
+                          notifDropdown.style.display = "block";
+                          span.style.display="none";
+                          userDropdown.style.display = "none";
+                           
+                        }
+                    });
+                    
+                  //  texto=document.querySelectorAll(".texto-image");
+                    btnAccept=document.querySelectorAll(".accept");
+                    btnrefuser=document.querySelectorAll(".refuser");
+                    item=document.querySelector(".notifi-item");
+                    btnAccept.forEach(element => {
+                      element.addEventListener("click", function() {
+                        const parent=(((element.parentElement).parentElement).parentElement).parentElement;
+                        const text=((element.parentElement).parentElement).parentElement;
+                        parent.style.backgroundColor="#f1fdf6";
+                        text.innerHTML=`<p style="padding:15px 20px 0px 0px;font-size:14px;font-weight: normal;font-family: Arial, Helvetica, sans-serif;">
+                         <span style="padding-left:50px;font-weight:600px;font-size:16px;color:black"> 👏 Demande acceptée !!</span><br><span style="  font-weight: 600;color:black;font-size: 14px;">
+                            Mohamed rekik</span>
+                            prendra contact avec vous pour organiser la récupération du véhicule.Merci de rester joignable.</p> `;
+
+                    });
+                    }); 
+                    btnrefuser.forEach(element => {
+                      element.addEventListener("click", function() {
+                        const parent=(((element.parentElement).parentElement).parentElement).parentElement;
+                        const text=((element.parentElement).parentElement).parentElement;
+                        parent.style.backgroundColor="#fdf1f1";
+                      text.innerHTML=`<p style="padding:30px 60px;font-size:14px"> Demande refusée !!</p>`;
+
+                    });
+                    });
+                    var deleteDialog = document.getElementById("deleteDialog");
+
+   function openDialogButtonClick() {
+       if (typeof deleteDialog.showModal === "function") {
+           deleteDialog.showModal();
+       } else {
+           
+           console.error("Dialog API is not supported");
+       }
+   }
+   
+   function cancelButtonClick() {
+       deleteDialog.close();
+       loginDialog.close();
+   }
+   
+   function deleteButtonClick() {
+    window.location.href = "acceuil.html";
+       deleteDialog.close();
+   }
+
+   var loginDialog = document.getElementById("DeconnexionDialog");
+   function openDialogDeconnexion(){
+    if (typeof deleteDialog.showModal === "function") {
+      loginDialog.showModal();
+       } else {
+           
+           console.error("Dialog API is not supported");
+       }
+   }
+ function loginButtonClick() {
+  window.location.href = "login.html";
+     deleteDialog.close();
+ }
+
+
+                    document.getElementById("mon_profil").addEventListener("click", function () {
+                               // Code to open a new window or tab with a local file path
+                            window.open('profil.html', '_blank');
+                 });
+                   
+                
+                    document.getElementById("mes_annonces").addEventListener("click", function () {
+                        // Code to open a new window or tab with a URL
+                        window.open('mesAnnances.html', '_blank');
+                    });
+                
+                    document.getElementById("publier_annonce").addEventListener("click", function () {
+                        // Code to open a new window or tab with a URL
+                        window.open('publierAnnance', '_blank');
+                    });
+
+                
+                </script>
+              
+              <section>
+                <div class="container-footer w-container" style=" width: 1300px;padding-left: 0px;margin-left: 0px;position:absolute;left:-10px;padding-top: 30px;margin-top: 30px;">
+                  <div class="w-row">
+                    <div class="footer-column w-clearfix w-col w-col-4"><img src="images/logo.png" alt="" width="100px" height="120px" class="failory-logo-image">
+                      <h3 class="footer-failory-name">GoGreen</h3>
+                      <p class="footer-description-failory">site de location des moyens de transports verts<br></p>
+                    </div>
+                    <div class="footer-column w-col w-col-8">
+                      <div class="w-row">
+                        <div class="w-col w-col-8">
+                          <div class="w-row">
+                            <div class="w-col w-col-7 w-col-small-6 w-col-tiny-7">
+                              <h3 class="footer-titles">Liens rapides</h3>
+                              <p class="footer-links"  style="font-size:17px ;"><a href="" target="_blank"><span class="footer-link">Acceuil<br></span></a><a href=""><span class="footer-link">Apropos de nous<br></span></a><a href=""><span class="footer-link">Locations</span></a><span><br></span><a href=""><span class="footer-link">Contacts<br></span></a>
+                            </div>
+                            <div class="w-col w-col-5 w-col-small-6 w-col-tiny-5">
+                              <h3 class="footer-titles">Contacter</h3>
+                              <p class="footer-links">
+                                <p style="color: #FFFFFF;font-size: 17px;position: absolute;top:50px;padding-bottom: 2px;"><i class="fa fa-map-marker-alt me-3"></i><span class="footer-link"  style="font-size: 0.9rem;"></span> 5000 Monastir</p><p style="color: #FFFFFF;font-size:17px;position: absolute;top:75px;"><i class="fa fa-phone-alt me-3"></i><span class="footer-link">+216 73 541489<br></span></p><p style="color: #FFFFFF;font-size: 17px;"><span class="footer-link"></span></p><p style="color: #FFFFFF;font-size: 17px;position: absolute;top:100px;"><i class="fa fa-envelope me-3"></i><span class="footer-link">GoGreen@gmail.com<br></span></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="column-center-mobile w-col w-col-4">
+                          <h3 class="footer-titles">abonnéz nous </h3><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dbf0a2f2b67e3b3ba079c_Twitter%20Icon.svg" width="20" alt="Twitter icon"></a><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dbfe70fcf5a0514c5b1da_Instagram%20Icon.svg" width="20" alt="Instagram icon"></a><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dbe42e1e6034fdaba46f6_Facebook%20Icon.svg" width="20" alt="Facebook Icon"></a><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dc0002f2b676eb4ba0869_LinkedIn%20Icon.svg" width="20" alt="LinkedIn Icon"></a><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dc0112f2b6739c9ba0871_Pinterest%20Icon.svg" width="20" alt="Pinterest Icon" class=""></a>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>  
+                  
+                
+</body>
+</html>
+

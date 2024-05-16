@@ -1,0 +1,267 @@
+h1 {
+     text-align: center;
+    margin-bottom: 20px;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    font-size: 3rem; 
+    color: #fff;
+}
+
+.cadre {
+    align-items: center;
+    display: flex;
+    padding:80px 20px;
+    width: 100%;
+    margin: 10 auto;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    
+}
+.icons {
+    display: flex;
+}
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+
+.user-icon {
+    cursor: pointer;
+     }
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 190px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    top: 110%;
+    right: 0;
+    left:30px;
+}
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #eee;
+}
+.small-icon {
+    font-size: 25px; 
+    margin-right: 20px
+}
+.fa-bell{
+    font-size: 25px;
+    margin-right: 25px
+}
+.tableau{
+        width: 1000px;
+        border: 5px solid #ccc;
+        margin: 170px 100px 40px 130px;
+        border: 1px solid;
+        border-radius: 30px;
+        height: 400px;
+        align-items: center;
+        text-align: center;
+    }  
+    .cadre button {
+        padding: 15px 15px;
+        font-size: 15px;
+       width: 200px;
+        cursor: pointer;
+        outline: none;
+        color: #333;
+        background-color: #fff;
+        border: 1px solid #999;
+        border-radius: 15px;
+        margin-left: 20px;
+      }
+      
+      .button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+      .bande{
+        border-radius: 30px 30px 0 0;
+        position: relative;
+        top:0;
+        left:0;
+        height: 70px;
+        background-color: #04AA6D;
+      }
+     span{
+        color: #666;
+        font-size: 11px;
+     }
+     .nbNotification{
+        position: relative;
+        background:#f00;
+        padding:7px;
+         border-radius: 50%;
+        color:#fff;
+        vertical-align: top;
+       /* margin-left: -78px;*/
+        top: -10px; 
+        left:-78px;
+     }
+     .dropdown-notifications{
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        width: 320px;
+        z-index: 1;
+        top: 110%;
+        right: 0;
+        left:-140px;
+        box-shadow: 0 4px 9px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+     } 
+     .notifi-item:hover {
+        background-color: #eee;
+    }
+    .texto-image{
+        display: flex;
+        padding:10px;
+    }
+    .text p{
+        padding: 5px;
+        font-size: 14px; 
+        font-weight: normal;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .buttonsAccept{
+        display: flex;
+        
+    }
+    .accept,.refuser{
+        margin-left: 10px;
+       padding: 10px;
+       border-radius: 10px;
+       border:1px solid #777;
+    }
+    .accept{
+        background-color: #04AA6D;
+        color:#fff;
+    }
+    .refuser{
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #fff;
+        color:#04AA6D;
+    }
+    .text span{
+        font-weight: 600;
+        color:black;
+        font-size: 14px;
+    }
+
+
+    .open-button button {
+        background-color: #35898f;
+        color: white;
+        border: 0;
+        padding: 0.7em 1.1em;
+        border-radius: 1.3em;
+        cursor: pointer;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 0.9rem;
+      }
+      
+      .delete-dialog,.DeconnexionDialog {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border: 0;
+        box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.1);
+        border-radius: 0.8em;
+        height: 140px;
+      }
+      
+      /* body overlay color when the dialog shows up */
+      .delete-dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+      
+      .delete-dialog-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1.2em;
+      }
+      
+      .trash-icon {
+        width: 2rem;
+        height: 2rem;
+      }
+      
+      .heading {
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .heading h5 {
+        font-size: 1.2rem;
+        padding-left: 0.6em;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+      }
+      
+      .delete-dialog-container{
+         width: 500px;
+         height: 100px;
+         
+      }
+      
+      
+      .delete-dialog,.DeconnexionDialog p {
+        font-size: 1.7rem;
+        font-family: "Roboto", sans-serif;
+        padding: 1em 0;
+      }
+      
+      .dialog-buttons {
+        margin-left: auto;
+        padding: 0.1em 0;
+      }
+      
+      .dialog-button {
+        color: white;
+        border: 0;
+        padding: 0.5em 1.1em;
+        border-radius: 0.6em;
+        border-width: 0.2em;
+        border-style: solid;
+        cursor: pointer;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+      }
+      
+      .cancel-button {
+        background-color: white;
+        border-color: #35898f;
+        color: #35898f;
+      }
+      
+      .delete-button {
+        background-color: #f00;
+        border-color: #f00;
+        margin-left: 0.5em;
+      }
+      
+      #deleteLink {
+        color: #000; 
+        cursor: pointer; 
+      }

@@ -1,0 +1,679 @@
+ <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mes Annonces</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <link rel="stylesheet" href="footerStyle.css">
+        <link rel="stylesheet" href="navbarStyle.css">
+       <link rel="stylesheet" href="annonce.css">
+      
+       <script defer src="annonce.js"></script>
+      
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;800&family=Inter:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;800;900&family=Inter:wght@900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" ref="stylesheet"> 
+       
+       
+    </head>
+    <body>
+        <header>
+          <div class="overlay"></div>
+            <input type="checkbox" name="" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label>
+                 <a href="#" class="logo">GoGreen</a>
+                 <nav class="navbar">
+                  <a href="acceuil.html">Acceuil</a>
+                  <a href="about.html">A propos</a>
+                  <a href="locations.html">Locations</a>
+                  <a href="contact.html">Contact</a>
+                        
+              </nav> 
+              <div class="user-menu">
+                <div class="user-icon">
+                    <i class="fa-solid fa-bell"></i>
+                    <i class="fas fa-user small-icon" id="userIcon"></i>
+                  
+                </div>
+                <div class="dropdown-content" id="userDropdown">
+                    <a href="file:///C:/Users/asus/Desktop/site%20web/profil.html">
+                        <i class="fas fa-user fa-xs"></i>Profil
+                    </a>
+                    <a href="file:///C:/Users/asus/Desktop/site%20web/tableau.html">
+                        <i class="fas fa-table-list fa-xs"></i>Tableau de Bord</a>
+                      
+                    <a href="file:///D:/dev%20web/GoGreen.com/site%20web/login.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>Se Déconnecter</a>
+                       
+                        <a href="#" id="deleteLink" onclick="openDialogButtonClick()">
+                            <span>🗑️</span>Supprimer compte
+                        </a>
+                    
+                        <dialog class="delete-dialog" id="deleteDialog">
+                            <div class="delete-dialog-container">
+                                <p>Êtes-vous sûr de vouloir supprimer votre compte ?</p>
+                    
+                                <div class="dialog-buttons">
+                                    <button class="dialog-button cancel-button" onclick="cancelButtonClick()">
+                                        Annuler
+                                    </button>
+                                    <button class="dialog-button delete-button" onclick="deleteButtonClick()">
+                                        Supprimer
+                                    </button>
+                                </div>
+                            </div>
+                        </dialog>
+                        <div class="cart">
+                          <div class="cart-content">
+                            <div class="img-titre">
+                              <img src="images/velo1.jpeg" width="90px" height="90px" class="img-cart">
+                              <div class="titre-cart"> 
+                                Vélo électrique Premium <br>
+                                - <span class="Nonelectrique-cart">NonÉlectrique</span>
+                              </div>
+                            </div>
+                            <div class="carac-modele">
+                              <p style="padding:30px 5px ; padding-bottom:15px;color:#0b5541;font-size: 16; font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;">caracteristique du modèle</p>
+                              <div class="couleur-modele">
+                                <p class="labels">couleur du modele </p>
+                                <div class="labels" id="couleur">jaune</div>
+                              </div>
+                            </div>
+                            <i class="fas fa-times" id="close-cart"></i>
+                          </div>
+                        </div>
+                      </div>
+                 </div>
+            </div>   
+          </header>
+
+          <div class="form-step ">
+            <div style="width:500px">
+              <p style="padding-top:70px;  font-size: 40px;
+               color:#2B3940;">Materiel disponible </p>
+            </div>
+            <div class="mat-panier">
+                <div class="materiel">
+                    <div class="buttons">
+                        <button type="button" class="btn-velo"><img src="images/velo.png" width="30px" height="40px" style="margin-left:2px;">Vélo</button>
+                        <button type="button" class="btn-trottinette"><img src="images/trotinette.png" width="30px" height="40px">Trottinette</button>
+                        <button type="button" class="btn-voiture"><img src="images/voiture.png" width="30px" height="40px">Voiture</button>
+                        <button type="button" class="btn-chaussuresRoue"><img src="images/chaussure-roue.png" width="30px" height="40px">Chaussure a roulette</button>
+                    </div>
+                    <div class="sub-buttons" id="sub-buttons">
+                    </div>
+                    <div class="materiels">
+                      <div   id="tous-velos" class="affich">
+                        <div class="gallery">
+                         <div class="images">
+                            <div class="art">
+                                <div class="proprietaire">
+                                    <img src="images/profil.png" width="30px" heigth="40px">
+                                    <div class="prop">zeineb chekir</div> 
+                                </div>
+                               <img src="images/velo1.jpeg" width="260px" height="200px" class="img-product" >
+                               <p class="infoM"> Vélo électrique Homme premium - VTC/Randonnées - <span class="electrique"><i class="fas fa-bolt"></i>-Électrique</span></p>
+                               <div class="prix-carac">
+                                <button type="button" class="carac"> voir les caracteristiques</button>
+                                <p class="prix">3dt/h</p>
+                               </div>
+                               <div class="ajouter">
+                                <i class="fas fa-shopping-cart" class="iconP"></i>
+                                <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="images">
+                            <div class="art">
+                                <div class="proprietaire">
+                                    <img src="images/profil.png" width="30px" heigth="40px">
+                                    <div class="prop">zeineb chekir</div> 
+                                </div>
+                               <img src="images/velo2.jpg" width="260px" height="200px" class="img-product" >
+                               <p  class="infoM"> Vélo électrique Homme  -<span class="Nonelectrique">nonElectrique</span></p>
+                               <div class="prix-carac">
+                                <button type="button" class="carac"> voir les caracteristiques</button>
+                                <p class="prix">3dt/h</p>
+                               </div>
+                               <div class="ajouter">
+                                <i class="fas fa-shopping-cart" class="iconP"></i>
+                                <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                               </div>
+                            </div>
+                        </div>   
+                        <div class="images">
+                            <div class="art">
+                                <div class="proprietaire">
+                                    <img src="images/profil.png" width="30px" heigth="40px">
+                                    <div class="prop">zeineb chekir</div> 
+                                </div>
+                               <img src="images/velo3.jpeg" width="260px" height="200px" class="img-product" >
+                               <p class="infoM"> Vélo electrique femme  - <span class="Nonelectrique">NonÉlectrique</span></p>
+                               <div class="prix-carac">
+                                <button type="button" class="carac"> voir les caracteristiques</button>
+                                <p class="prix">3dt/h</p>
+                               </div>
+                               <div class="ajouter">
+                                <i class="fas fa-shopping-cart" class="iconP"></i>
+                                <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                               </div>
+                            </div> 
+                        </div>
+                             
+                           
+                        <div class="images">
+                            <div class="art">
+                                <div class="proprietaire">
+                                    <img src="images/profil.png" width="30px" heigth="40px">
+                                    <div class="prop">zeineb chekir</div> 
+                                </div>
+                                <img src="images/velo3.jpeg" width="260px" height="200px" class="img-product">
+                                <p  class="infoM"> Vélo électrique randonné- <span class="electrique"><i class="fas fa-bolt"></i>Électrique</span></p>
+                                <div class="prix-carac">
+                                    <button type="button" class="carac"> voir les caracteristiques</button>
+                                    <p class="prix">3dt/h</p>
+                                </div>
+                                <div class="ajouter">
+                                    <i class="fas fa-shopping-cart" class="iconP"></i>
+                                    <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                                   
+                                </div>
+                              
+                            </div>
+                               
+                        </div>
+                      </div>
+                    </div>
+                    <div id="velos-elect"  class="affich">
+                        <div  class="gallery">
+                            <div class="images">
+                                <div class="art">
+                                    <div class="proprietaire">
+                                        <img src="images/profil.png" width="30px" heigth="40px">
+                                        <div class="prop">zeineb chekir</div> 
+                                    </div>
+                                   <img src="images/velo1.jpeg" width="260px" height="200px" class="img-product" >
+                                   <p class="infoM"> Vélo en bonne etat - <span class="electrique"><i class="fas fa-bolt"></i>-Électrique</span></p>
+                                   <div class="prix-carac">
+                                    <button type="button" class="carac"> voir les caracteristiques</button>
+                                    <p class="prix">3dt/h</p>
+                                   </div>
+                                   <div class="ajouter">
+                                    <i class="fas fa-shopping-cart" class="iconP"></i>
+                                    <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="velos-simple" class="affich">    
+                        <div  class="gallery" >
+                            <div class="images">
+                                <div class="art">
+                                    <div class="proprietaire">
+                                        <img src="images/profil.png" width="30px" heigth="40px">
+                                        <div class="prop">zeineb chekir</div> 
+                                    </div>
+                                   <img src="images/velo2.jpg" width="260px" height="200px" class="img-product" >
+                                   <p  class="infoM"> Vélo electric -<span class="Nonelectrique">nonElectrique</span></p>
+                                   <div class="prix-carac">
+                                    <button type="button" class="carac"> voir les caracteristiques</button>
+                                    <p class="prix">3dt/h</p>
+                                   </div>
+                                   <div class="ajouter">
+                                    <i class="fas fa-shopping-cart" class="iconP"></i>
+                                    <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                                   </div>
+                                </div>
+                            </div>   
+                            <div class="images">
+                                <div class="art">
+                                    <div class="proprietaire">
+                                        <img src="images/profil.png" width="30px" heigth="40px">
+                                        <div class="prop">moahmed jbeli</div> 
+                                    </div>
+                                   <img src="images/velo3.jpeg" width="260px" height="200px" class="img-product" >
+                                   <p class="infoM"> Vélo normale- <span class="Nonelectrique">NonÉlectrique</span></p>
+                                   <div class="prix-carac">
+                                    <button type="button" class="carac"> voir les caracteristiques</button>
+                                    <p class="prix">3dt/h</p>
+                                   </div>
+                                   <div class="ajouter">
+                                    <i class="fas fa-shopping-cart" class="iconP"></i>
+                                    <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                                   </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>    
+                        <div id="tous-trot" class="affich">
+                            <div  class="gallery" >
+                                <div class="images">
+                                    <div class="art">
+                                        <div class="proprietaire">
+                                            <img src="images/profil.png" width="30px" heigth="40px">
+                                            <div class="prop">senda kammoun</div> 
+                                        </div>
+                                       <img src="images/trot1.jpeg" width="260px" height="200px" class="img-product" >
+                                       <p  class="infoM"> trotinette normale -<span class="Nonelectrique">nonElectrique</span></p>
+                                       <div class="prix-carac">
+                                        <button type="button" class="carac"> voir les caracteristiques</button>
+                                        <p class="prix">3dt/h</p>
+                                       </div>
+                                       <div class="ajouter">
+                                        <i class="fas fa-shopping-cart" class="iconP"></i>
+                                        <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                                       </div>
+                                    </div>
+                                </div>   
+                                <div class="images">
+                                    <div class="art">
+                                        <div class="proprietaire">
+                                            <img src="images/profil.png" width="30px" heigth="40px">
+                                            <div class="prop">senda kammoun</div> 
+                                        </div>
+                                       <img src="images/trot2.jpg" width="260px" height="200px" class="img-product">
+                                       <p class="infoM"> trotinette en bonne etat - <span class="Nonelectrique">NonÉlectrique</span></p>
+                                       <div class="prix-carac">
+                                        <button type="button" class="carac"> voir les caracteristiques</button>
+                                        <p class="prix">3dt/h</p>
+                                       </div>
+                                       <div class="ajouter">
+                                        <i class="fas fa-shopping-cart" class="iconP"></i>
+                                        <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                                       </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <div id="trot-elect" class="affich">
+                            <div  class="gallery" >
+                                <div class="images">
+                                    <div class="art">
+                                        <div class="proprietaire">
+                                            <img src="images/profil.png" width="30px" heigth="40px">
+                                            <div class="prop">zeineb chekir</div> 
+                                        </div>
+                                       <img src="images/trot1.jpeg" width="260px" height="200px" class="img-product">
+                                       <p  class="infoM"> trotinette électrique<span class="Nonelectrique">nonElectrique</span></p>
+                                       <div class="prix-carac">
+                                        <button type="button" class="carac"> voir les caracteristiques</button>
+                                        <p class="prix">3dt/h</p>
+                                       </div>
+                                       <div class="ajouter">
+                                        <i class="fas fa-shopping-cart" class="iconP"></i>
+                                        <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                                       </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div id="trot-simple" class="affich">
+                            <div  class="gallery" >
+                                <div class="images">
+                                   <div class="art">
+                                    <div class="proprietaire">
+                                        <img src="images/profil.png" width="30px" heigth="40px">
+                                        <div class="prop">zeineb chekir</div> 
+                                    </div>
+                                       <img src="images/trot2.jpg" width="260px" height="200px" class="img-product" >
+                                       <p class="infoM"> Vtrotinette noir- <span class="Nonelectrique">NonÉlectrique</span></p>
+                                        <div class="prix-carac">
+                                            <button type="button" class="carac"> voir les caracteristiques</button>
+                                       <p class="prix">5.5dt/h</p>
+                                        </div>
+                                        <div class="ajouter">
+                                        <i class="fas fa-shopping-cart" class="iconP"></i>
+                                        <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tout-chauss" class="affich">
+                            <div  class="gallery" >
+                                <div class="images">
+                                    <div class="art">
+                                        <div class="proprietaire">
+                                            <img src="images/profil.png" width="30px" heigth="40px">
+                                            <div class="prop">zeineb chekir</div> 
+                                        </div>
+                                       <img src="images/chau1.jpeg" width="260px" height="200px" class="img-product">
+                                       <p class="infoM"> chaussures a roulette- <span class="Nonelectrique">NonÉlectrique</span></p>
+                                       <div class="prix-carac">
+                                        <button type="button" class="carac"> voir les caracteristiques</button>
+                                        <p class="prix">3dt/h</p>
+                                       </div>
+                                       <div class="ajouter">
+                                        <i class="fas fa-shopping-cart" class="iconP"></i>
+                                        <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                                       </div>
+                                    </div> 
+                                </div>
+                                <div class="images">
+                                    <div class="art">
+                                        <div class="proprietaire">
+                                            <img src="images/profil.png" width="30px" heigth="40px">
+                                            <div class="prop">zeineb chekir</div> 
+                                        </div>
+                                       <img src="images/chau2.jpeg" width="260px" height="200px" class="img-product">
+                                       <p class="infoM"> chaussure a roues - <span class="Nonelectrique">NonÉlectrique</span></p>
+                                       <div class="prix-carac">
+                                        <button type="button" class="carac"> voir les caracteristiques</button>
+                                        <p class="prix">2dt/h</p>
+                                       </div>
+                                       <div class="ajouter">
+                                        <i class="fas fa-shopping-cart" class="iconP"></i>
+                                        <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                                       </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tous-voit" class="affich">
+                            <div  class="gallery" >
+                                <div class="images">
+                                    <div class="art">
+                                        <div class="proprietaire">
+                                            <img src="images/profil.png" width="30px" heigth="40px">
+                                            <div class="prop">zeineb chekir</div> 
+                                        </div>
+                                       <img src="images/voit1.jpeg" width="100%" height="200px" class="img-product" >
+                                       <p class="infoM"> voiture electrique- <span class="Nonelectrique">NonÉlectrique</span></p>
+                                       <div class="prix-carac">
+                                        <button type="button" class="carac"> voir les caracteristiques</button>
+                                        <p class="prix">7dt/h</p>
+                                       </div>
+                                       <div class="ajouter">
+                                        <i class="fas fa-shopping-cart" class="iconP"></i>
+                                        <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                                       </div>
+                                    </div> 
+                                </div>
+                                <div class="images">
+                                    <div class="art">
+                                        <div class="proprietaire">
+                                            <img src="images/profil.png" width="30px" heigth="40px">
+                                            <div class="prop">zeineb chekir</div> 
+                                        </div>
+                                       <img src="images/voit2.jpg" width="100%" height="200px" class="img-product">
+                                       <p class="infoM"> voiture smart </p>
+                                       <div class="prix-carac">
+                                        <button type="button" class="carac"> voir les caracteristiques</button>
+                                        <p class="prix">8dt/h</p>
+                                       </div>
+                                       <div class="ajouter">
+                                        <i class="fas fa-shopping-cart" class="iconP"></i>
+                                        <button type="button" class="btn-ajoutPanier">AJOUTER AU PANIER</button>
+                                       </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                 
+              </div>
+            
+            </div>
+        </div>
+
+     
+        <!-- <form class="form-step "> 
+        <div  style="width:500px">
+                  <p style="padding-top:70px;  font-size: 40px;
+                   color:#2B3940;">Materiel disponible </p>
+                </div>
+                <div>
+                    <div class="materiel">
+                    <div class="buttons" style="display: flex; gap: 10px; width: 150%;">
+                        <button type="button" class="btn-velo"><img src="images/velo.png" width="30px" height="40px" style="margin-left:2px;">Vélo</button>
+                        <button type="button" class="btn-trottinette"><img src="images/trotinette.png" width="30px" height="40px">Trottinette</button>
+                        <button type="button" class="btn-voiture"><img src="images/voiture.png" width="30px" height="40px">Voiture</button>
+                        <button type="button" class="btn-chaussuresRoue"><img src="images/chaussure-roue.png" width="30px" height="40px">Chaussure a roulette</button>
+                    </div> -->
+
+                <!-- </div> -->
+                <!-- <div class="materiels">
+                  <div id="tous-velos" class="affich">
+                    <div class="images">
+                      <div class="art">
+                        <img src="images/velo1.jpeg" width="260px" height="200px">
+                        <p class="infoM"> Vélo électrique Homme premium - VTC/Randonnées - <span class="electrique"><i class="fas fa-bolt"></i>-Électrique</span></p>
+                        <div class="prix-carac">
+                          <button type="button" class="carac"> voir les caracteristiques</button>
+                          <p class="prix">3dt/h</p>
+                        </div>
+                        <button type="button" class="btn-modifier"  onclick="window.location.href='file:///C:/Users/asus/Desktop/site%20web/publier%20une%20annonce.html?pets='">
+                          <i class="fas fa-edit iconP"></i>
+                          MODIFIER
+                        </button>
+                        <button type="button" class="btn-supprimer" onclick="afficherConfirmation()">
+                          <i class="fas fa-trash-alt iconP"></i>
+                          SUPPRIMER
+                        </button>
+                        
+                        <div id="confirmationModal" class="modal">
+                          <div class="modal-content">
+                            <p>Voulez-vous vraiment supprimer cette annonce ?</p>
+                            <button onclick="supprimerAnnonce()">Oui</button>
+                            <button onclick="fermerConfirmation()">Annuler</button>
+                          </div>
+                        </div>
+                      </div>
+                
+                      <div class="art">
+                        <img src="images/velo2.jpg" width="260px" height="200px">
+                        <p class="infoM"> Vélo électrique Homme premium - VTC/Randonnées -<span class="Nonelectrique">nonElectrique</span></p>
+                        <div class="prix-carac">
+                          <button type="button" class="carac"> voir les caracteristiques</button>
+                          <p class="prix">3dt/h</p>
+                        </div>
+                        <button type="button" class="btn-modifier"    onclick="window.location.href='file:///C:/Users/asus/Desktop/site%20web/publier%20une%20annonce.html?pets='">
+                          <i class="fas fa-edit iconP"></i>
+                          MODIFIER
+                        </button>
+                        
+                        <button type="button" class="btn-supprimer" onclick="afficherConfirmation()">
+                          <i class="fas fa-trash-alt iconP"></i>
+                          SUPPRIMER
+                        </button>
+                        
+                        <div id="confirmationModal" class="modal">
+                          <div class="modal-content">
+                            <p>Voulez-vous vraiment supprimer cette annonce ?</p>
+                            <button onclick="supprimerAnnonce()">Oui</button>
+                            <button onclick="fermerConfirmation()">Annuler</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <div class="images">
+                      <div class="art">
+                        <img src="images/velo3.jpeg" width="260px" height="200px">
+                        <p class="infoM"> Vélo électrique Homme premium - VTC/Randonnées - <span class="Nonelectrique">NonÉlectrique</span></p>
+                        <div class="prix-carac">
+                          <button type="button" class="carac"> voir les caracteristiques</button>
+                          <p class="prix">3dt/h</p>
+                        </div>
+                        <button type="button" class="btn-modifier"    onclick="window.location.href='file:///C:/Users/asus/Desktop/site%20web/publier%20une%20annonce.html?pets='">
+                          <i class="fas fa-edit iconP"></i>
+                          MODIFIER
+                        </button>
+                        
+                        <button type="button" class="btn-supprimer">
+                          <i class="fas fa-trash-alt iconP"></i>
+                          SUPPRIMER
+                        </button>
+                      </div>
+                      <div class="art">
+                        <img src="images/velo3.jpeg" width="260px" height="200px">
+                        <p class="infoM"> Vélo électrique Homme premium - VTC/Randonnées - <span class="electrique"><i class="fas fa-bolt"></i>Électrique</span></p>
+                        <div class="prix-carac">
+                          <button type="button" class="carac"> voir les caracteristiques</button>
+                          <p class="prix">3dt/h</p>
+                        </div>
+                        <button type="button" class="btn-modifier"    onclick="window.location.href='file:///C:/Users/asus/Desktop/site%20web/publier%20une%20annonce.html?pets='">
+                          <i class="fas fa-edit iconP"></i>
+                          MODIFIER
+                        </button>
+                        
+                        <button type="button" class="btn-supprimer">
+                          <i class="fas fa-trash-alt iconP"></i>
+                          SUPPRIMER
+                        </button>
+                      </div>
+                    </div>
+                
+                    <div class="images">
+                      <div class="art">
+                         <img src="images/trot1.jpeg" width="260px" height="200px">
+                        <p class="infoM"> Vélo électrique Homme premium - VTC/Randonnées -<span class="Nonelectrique">nonElectrique</span></p>
+                        <div class="prix-carac">
+                          <button type="button" class="carac"> voir les caracteristiques</button>
+                          <p class="prix">3dt/h</p>
+                        </div>
+                        <button type="button" class="btn-modifier"    onclick="window.location.href='file:///C:/Users/asus/Desktop/site%20web/publier%20une%20annonce.html?pets='">
+                          <i class="fas fa-edit iconP"></i>
+                          MODIFIER
+                        </button>
+                        
+                        <button type="button" class="btn-supprimer">
+                          <i class="fas fa-trash-alt iconP"></i>
+                          SUPPRIMER
+                        </button>
+                      </div>
+                
+                      <div class="art">
+                        <img src="images/trot2.jpg" width="260px" height="200px">
+                        <p class="infoM"> Vélo électrique Homme premium - VTC/Randonnées - <span class="Nonelectrique">NonÉlectrique</span></p>
+                        <div class="prix-carac">
+                          <button type="button" class="carac"> voir les caracteristiques</button>
+                          <p class="prix">3dt/h</p>
+                        </div>
+                        <button type="button" class="btn-modifier"    onclick="window.location.href='file:///C:/Users/asus/Desktop/site%20web/publier%20une%20annonce.html?pets='">
+                          <i class="fas fa-edit iconP"></i>
+                          MODIFIER
+                        </button>
+                        
+                        <button type="button" class="btn-supprimer">
+                          <i class="fas fa-trash-alt iconP"></i>
+                          SUPPRIMER
+                        </button>
+                      </div>
+                    </div>
+                    <div class="images">
+                      <div class="art">
+                            <img src="images/chau1.jpeg" width="260px" height="200px" >
+                         <p class="infoM"> Vélo électrique Homme premium - VTC/Randonnées - <span class="Nonelectrique">NonÉlectrique</span></p>
+                         <div class="prix-carac">
+                          <button type="button" class="carac"> voir les caracteristiques</button>
+                          <p class="prix">3dt/h</p>
+                         </div>
+                         <button type="button" class="btn-modifier"    onclick="window.location.href='file:///C:/Users/asus/Desktop/site%20web/publier%20une%20annonce.html?pets='">
+                          <i class="fas fa-edit iconP"></i>
+                          MODIFIER
+                        </button>
+                        
+                        <button type="button" class="btn-supprimer">
+                          <i class="fas fa-trash-alt iconP"></i>
+                          SUPPRIMER
+                        </button>
+                        </div>
+                          <div class="art">
+                              <img src="images/chau2.jpeg" width="260px" height="200px" >
+                             <p class="infoM"> Vélo électrique Homme premium - VTC/Randonnées - <span class="Nonelectrique">NonÉlectrique</span></p>
+                             <div class="prix-carac">
+                              <button type="button" class="carac"> voir les caracteristiques</button>
+                              <p class="prix">3dt/h</p>
+                             </div>
+                             <button type="button" class="btn-modifier"    onclick="window.location.href='file:///C:/Users/asus/Desktop/site%20web/publier%20une%20annonce.html?pets='">
+                              <i class="fas fa-edit iconP"></i>
+                              MODIFIER
+                            </button>
+                            
+                            <button type="button" class="btn-supprimer">
+                              <i class="fas fa-trash-alt iconP"></i>
+                              SUPPRIMER
+                            </button>
+                          </div>
+                </div>
+                <div class="images">
+                  <div class="art">
+                      <img src="images/voit1.jpeg" width="100%" height="200px" >
+                     <p class="infoM"> Vélo électrique Homme premium - VTC/Randonnées - <span class="Nonelectrique">NonÉlectrique</span></p>
+                     <div class="prix-carac">
+                      <button type="button" class="carac"> voir les caracteristiques</button>
+                      <p class="prix">3dt/h</p>
+                     </div>
+                     <button type="button" class="btn-modifier"    onclick="window.location.href='file:///C:/Users/asus/Desktop/site%20web/publier%20une%20annonce.html?pets='">
+                      <i class="fas fa-edit iconP"></i>
+                      MODIFIER
+                    </button>
+                    
+                    <button type="button" class="btn-supprimer">
+                      <i class="fas fa-trash-alt iconP"></i>
+                      SUPPRIMER
+                    </button>
+                     </div>
+                     <div class="art">
+                       <img src="images/voit2.jpg" width="100%" height="200px" >
+                     <p class="infoM"> Vélo électrique Homme premium - VTC/Randonnées - <span class="Nonelectrique">NonÉlectrique</span></p>
+                     <div class="prix-carac">
+                      <button type="button" class="carac"> voir les caracteristiques</button>
+                      <p class="prix">3dt/h</p>
+                     </div>
+                     <button type="button" class="btn-modifier"    onclick="window.location.href='file:///C:/Users/asus/Desktop/site%20web/publier%20une%20annonce.html?pets='">
+                      <i class="fas fa-edit iconP"></i>
+                      MODIFIER
+                    </button>
+                    
+                    <button type="button" class="btn-supprimer">
+                      <i class="fas fa-trash-alt iconP"></i>
+                      SUPPRIMER
+                    </button>
+                
+                    </form> -->
+
+
+            <!-- <section>
+            <div class="container-footer w-container">
+              <div class="w-row">
+                <div class="footer-column w-clearfix w-col w-col-4"><img src="images/logo.png" alt="" width="100px" height="120px" class="failory-logo-image">
+                  <h3 class="footer-failory-name">GoGreen</h3>
+                  <p class="footer-description-failory">site de location des moyens de transports verts<br></p>
+                </div>
+                <div class="footer-column w-col w-col-8">
+                  <div class="w-row">
+                    <div class="w-col w-col-8">
+                      <div class="w-row">
+                        <div class="w-col w-col-7 w-col-small-6 w-col-tiny-7">
+                          <h3 class="footer-titles">Liens rapides</h3>
+                          <p class="footer-links"><a href="" target="_blank"><span class="footer-link">Acceuil<br></span></a><a href=""><span class="footer-link">Apropos de nous<br></span></a><a href=""><span class="footer-link">Locations</span></a><span><br></span><a href=""><span class="footer-link">Contacts<br></span></a>
+                        </div>
+                        <div class="w-col w-col-5 w-col-small-6 w-col-tiny-5">
+                          <h3 class="footer-titles">Contacter</h3>
+                          <p class="footer-links">
+                            <p style="color: #FFFFFF;"><i class="fa fa-map-marker-alt me-3"></i><span class="footer-link" style="font-size: 4rem;"></span> 5000 Monastir</p><p style="color: #FFFFFF"><i class="fa fa-phone-alt me-3"></i><span class="footer-link">+216 73 541489<br></span></p><p style="color: #FFFFFF"><span class="footer-link"></span></p><p style="color: #FFFFFF"><i class="fa fa-envelope me-3"></i><span class="footer-link">GoGreen@gmail.com<br></span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column-center-mobile w-col w-col-4">
+                      <h3 class="footer-titles">abonnéz nous </h3><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dbf0a2f2b67e3b3ba079c_Twitter%20Icon.svg" width="20" alt="Twitter icon"></a><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dbfe70fcf5a0514c5b1da_Instagram%20Icon.svg" width="20" alt="Instagram icon"></a><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dbe42e1e6034fdaba46f6_Facebook%20Icon.svg" width="20" alt="Facebook Icon"></a><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dc0002f2b676eb4ba0869_LinkedIn%20Icon.svg" width="20" alt="LinkedIn Icon"></a><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dc0112f2b6739c9ba0871_Pinterest%20Icon.svg" width="20" alt="Pinterest Icon" class=""></a>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>    -->
+        </body>
+  </html> 

@@ -1,0 +1,38 @@
+.home{
+    display :flex;
+    min-height: 90vh;
+    background: url(images/transportMode.png) no-repeat;
+    background-size: cover; 
+    align-items: center;
+ 
+ }
+ .img-rect{
+     height: 270px;
+     padding-top: 4rem;
+     padding-left: 4rem;
+ }
+ 
+ section .content h1{
+     position: relative;
+     font-family: 'Inter';
+     font-size: 5rem;
+     color: #fff;
+     padding-top: .5rem;
+     top:-15.5rem;
+     left:15vh;
+     animation: descendre 1.5s ease-in-out;
+ }
+ @keyframes descendre {
+     0% {
+         transform: translateY(-500%);
+         opacity: 0;
+     }
+     50% {
+         opacity: 1;
+     }
+     100% {
+         transform: translateY(0);
+         opacity: 1;
+ 
+     }
+ }

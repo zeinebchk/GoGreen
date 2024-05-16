@@ -1,0 +1,320 @@
+.profil{
+    width: 100%;
+    padding: 25px;
+    align-items: center;
+    padding-top: 200px;
+    
+}
+.profil form{
+    width: 650px;
+    height: 100px;
+    padding: 30px;
+    border-radius: 25px;
+    margin: 0 auto;
+    display: table;
+    background-color: #fff;
+    
+}
+.img{
+    display :flex;
+     min-height: 70rem;
+     background: url(images/background.jpg) no-repeat;
+     background-size: cover; 
+     align-items: center;
+  }
+h2{
+    text-align:center;
+    padding: 2rem 0 20px 0 ;
+    border-bottom: 1px solid silver;
+    font-family: 'Inter';
+    font-size: 3rem;
+} 
+
+form .txt_field{
+    position:relative;
+    border-bottom: 2px solid #adadad;
+    margin:30px ;
+    text-align: center;
+    
+ 
+}
+
+.open-button button {
+    background-color: #35898f;
+    color: white;
+    border: 0;
+    padding: 0.7em 1.1em;
+    border-radius: 1.3em;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+
+  .delete-dialog {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 0;
+    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.1);
+    border-radius: 0.8em;
+  }
+
+  /* body overlay color when the dialog shows up */
+  .delete-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .delete-dialog-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2em;
+  }
+
+  .trash-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .heading {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .heading h5 {
+    font-size: 1.2rem;
+    padding-left: 0.6em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+  }
+
+.delete-dialog-container{
+     width: 500px;
+     height: 100px;
+     
+}
+
+
+  .delete-dialog p {
+    font-size: 1.1rem;
+    font-family: "Roboto", sans-serif;
+    padding: 1em 0;
+}
+
+.dialog-buttons {
+    margin-left: auto;
+    padding: 0.1em 0;
+}
+
+.dialog-button {
+    color: white;
+    border: 0;
+    padding: 0.5em 1.1em;
+    border-radius: 0.6em;
+    border-width: 0.2em;
+    border-style: solid;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+
+.cancel-button {
+    background-color: white;
+    border-color: #35898f;
+    color: #35898f;
+}
+
+.delete-button {
+    background-color: #f00;
+    border-color: #f00;
+    margin-left: 0.5em;
+}
+
+#deleteLink {
+    color: #000; 
+    cursor: pointer; 
+}
+
+.txt_field input{
+    width:100%;
+    padding:0 5px;
+    height: 40px;
+    font-size: 16px;
+    border:none;
+    background: none;
+    outline: none;
+  
+}
+.txt_field label{
+    position: absolute;
+    top:50%;
+    left:5px;
+    color:#adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+   
+}
+.txt_field span::before{
+    content:'';
+    position: absolute;
+    top: 40px;
+    left:0;
+    width:0%;
+    height:2px;
+    background: #18a777;
+    transition: .5s;
+}
+.txt_field input:focus~label,
+.txt_field input:valid~label{
+    top:-5px;
+    color: #18a777;
+}
+.txt_field input:focus~span::before,
+.txt_field input:valid~span::before{
+    width:100%;
+    color: #18a777;
+}
+
+.divInformation img{
+    margin-top: 20px;
+    border-radius: 100%;
+    margin-left: 30px;
+}
+.file-input-label {
+    display: inline-block;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .file-input-label i {
+    margin-right: 5px;
+  }
+  
+  .file-input {
+    display: none;
+  }
+label{
+    font-size: 19px;
+}
+.star{
+    color: rgb(9, 185, 9);
+    font-size: 20px;
+    margin-left: 3px;
+    font-weight: bold;
+}
+
+.form1{
+    width: 100%;
+    display: inline-block;
+ 
+}
+.button input{
+    text-align: center;
+}
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+button span {
+    margin-right: 5px;
+    font-size: 1.2em;
+}
+
+#modifier {
+    background-color: #27ae60;
+}
+
+#supprimer {
+    background-color: #e74c3c;
+}
+
+.button input:hover{
+    background: #66806A;
+    transition: .4 all ease-in;
+}
+
+.icons {
+    display: flex;
+}
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+
+.user-icon {
+    cursor: pointer;}
+.user-icon {
+    cursor: pointer;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    top: 100%;
+    right: 0;
+}
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #eee;
+}
+.user-menu:hover .dropdown-content {
+    display: block;
+}
+.small-icon {
+    font-size: 25px; 
+    margin-right: 20px
+}
+
+.fa-bell{
+    font-size: 25px;
+    margin-right: 25px
+}
+
+.divInformation label{
+    display: block;
+    width: 200px;
+    background: green;
+    color: #fff;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.divInformation input{
+    display: none;
+}
+
+
+
+
+
+
